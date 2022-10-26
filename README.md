@@ -2,7 +2,7 @@
 <img width="70px" height="70px" src="https://user-images.githubusercontent.com/94927484/176516906-9ca35143-bb5b-41b1-9001-1ec77d5f065a.png#gh-dark-mode-only">
 
 <h1 align="center">Hangman</h1>
-<p>Web Game Application</p>
+<p>Demo: <a href="https://steelesh.github.io/JS-Hangman/"a>Open</a></p>
 
 <h1>Execution</h1>
 
