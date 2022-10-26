@@ -1,0 +1,371 @@
+/* BACKGROUND */
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* TITLE */
+h1 {
+  color: #f5f5f5;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+/* START OF LOGIN WRAPPER */
+#startWrapper {
+  position: absolute;
+  overflow: hidden;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 65%;
+  background: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 1.75rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* START PAGE ELEMENT CONTAINER (FLEX PARENT) */
+.startContainer {
+  display: flex;
+  margin: 5% auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAME FORM CONTAINER (FLEX ITEM 1) (FLEX PARENT) */
+#nameInput {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+/* NAME LABEL (FLEX ITEM 1) */
+#nameLbl {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 5px;
+}
+
+/* NAME INPUT (FLEX ITEM 2) */
+#my-name-input {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 0.5em;
+}
+
+/* INPUT SAVE NAME BUTTON (FLEX ITEM 3) */
+#save {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* DIFFICULTY FORM CONTAINER (FLEX ITEM 2) (FLEX PARENT)*/
+#difficultySelect {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+
+/* DIFFICULTY LABEL (FLEX ITEM 1)*/
+#difficultyLbl {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 5px;
+}
+
+/* DIFFICULTY SELECT DROPDOWN (FLEX ITEM 2) */
+#difficulty {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* BUTTON CONTAINER (FLEX ITEM 3) (FLEX PARENT) */
+.buttonContainerStart {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* START & RESET BUTTON (FLEX ITEM 1 & 2)*/
+#start {
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  width: 50%;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#reset {
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+  width: 50%;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* START OF GAME WRAPPER */
+#gameWrapper {
+  overflow: hidden;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 75%;
+  background: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 1.75rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* GAME PAGE ELEMENT CONTAINER (FLEX PARENT) */
+.gameContainer {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+}
+
+/* LETTERS GUESSED DISPLAY (FLEX ITEM 1) */
+#guesses {
+  align-self: flex-start;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 33%;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  text-align: left;
+}
+
+/* CANVAS CONTAINER (FLEX PARENT) */
+.canvasContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* CANVAS HANGMAN DRAWING(S) (FLEX ITEM 1) */
+#hangmanCanvas {
+  margin-bottom: 8%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TILES AND DISPLAY WORD (FLEX ITEM 2) */
+#wordHolder {
+  text-align: center;
+  font-size: clamp(0.75rem, 2vw + 1rem, 3.125rem);
+}
+
+/* USER INPUT (FLEX ITEM 3) (FLEX PARENT) */
+#guessForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2em;
+  gap: 0.5em;
+}
+
+#guessInput,
+#guessSubmitButton {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 0;
+  border: 1px solid transparent;
+  width: 10rem;
+}
+
+#guessInput {
+  text-align: center;
+  font-size: large;
+}
+
+#guessSubmitButton {
+  width: 10.188rem;
+  font-size: 0.8rem;
+}
+
+/* BUTTON CONTAINER (FLEX PARENT) */
+.buttonContainerGame {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+
+/* PLAY AGAIN BUTTON (FLEX CHILD 1) */
+#resetGame {
+  padding: 0.75rem;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* EXIT TO MENU BUTTON (FLEX CHILD 2) */
+#exitGame {
+  padding: 0.75rem;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 1.5rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ----------------------- MEDIA QUERIES ------------------------- */
+
+/* 1600px */
+@media only screen and (max-width: 1600px) {
+  #startWrapper {
+    height: 60%;
+  }
+  #hangmanCanvas {
+    width: 275px;
+    margin-bottom: 4%;
+  }
+}
+
+/* 1000px */
+@media only screen and (max-width: 1000px) {
+  h1 {
+    padding-top: 2rem;
+  }
+  #startWrapper {
+    height: 55%;
+  }
+  #gameWrapper {
+    height: 69%;
+  }
+  #hangmanCanvas {
+    width: 200px;
+  }
+  .gameContainer {
+    flex-direction: column;
+  }
+  #guessForm {
+    flex-direction: row;
+  }
+
+  #guessInput {
+    height: 5rem;
+  }
+
+  #guessSubmitButton {
+    height: 5.1rem;
+  }
+
+  .canvasContainer {
+    order: 2;
+  }
+  #guessInput,
+  #guessSubmitButton {
+    width: 5rem;
+  }
+  #guesses {
+    order: 3;
+    width: 80%;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+  #wordHolder {
+    margin-bottom: 0.5em;
+  }
+  #exitGame,
+  #resetGame {
+    margin-top: 2rem;
+  }
+}
+
+/* 800px */
+@media only screen and (max-width: 800px) {
+  #startWrapper {
+    height: 50%;
+  }
+  #gameWrapper {
+    height: 60%;
+  }
+  #hangmanCanvas {
+    width: 190px;
+    margin-bottom: 2%;
+  }
+  #guessInput {
+    height: 4rem;
+  }
+
+  #guessSubmitButton {
+    height: 4.1rem;
+  }
+}
+
+/* 500px */
+@media only screen and (max-width: 500px) {
+  #startWrapper {
+    height: 60%;
+  }
+  #gameWrapper {
+    height: 69%;
+  }
+  .buttonContainerStart {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+  }
+  #hangmanCanvas {
+    width: 165px;
+  }
+  #guessInput {
+    height: 3rem;
+  }
+
+  #guessSubmitButton {
+    height: 3.1rem;
+  }
+}
+
+/* 375px */
+@media only screen and (max-width: 375px) {
+  #hangmanCanvas {
+    width: 100px;
+  }
+  #guessInput {
+    height: 2rem;
+  }
+
+  #guessSubmitButton {
+    height: 2.1rem;
+  }
+}
