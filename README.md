@@ -1,20 +1,18 @@
-Hangman
-=====================
-[![Assignment Checks](https://github.com/IT3049C/Hangman/actions/workflows/classroom.yml/badge.svg)](https://github.com/IT3049C/Hangman/actions/workflows/classroom.yml)
+<img width="70px" height="70px" src="https://user-images.githubusercontent.com/94927484/176516844-ef80e3b5-849b-41d0-a824-b736f8c75f6a.png#gh-light-mode-only">
+<img width="70px" height="70px" src="https://user-images.githubusercontent.com/94927484/176516906-9ca35143-bb5b-41b1-9001-1ec77d5f065a.png#gh-dark-mode-only">
 
-Instructions to this assignment can be found [here](#).
+<h1 align="center">Hangman</h1>
+<p>Web Game Application</p>
 
-## Checklist:
-- [x] update the assignment checks above to the correct link. - Done Automatically
-- [x] make sure the assignment checks pass
-- [x] fill out the self evaluation and Reflection
-- [x] submit the repository link on Canvas
+<h1>Execution</h1>
 
-## Self-Evaluation:
+<h3>Menu</h3>
+<img width="750" alt="Application Menu" src="https://user-images.githubusercontent.com/94927484/198027412-8f30baf8-16b6-4db0-96d5-0ac8ad7bb29c.jpg">
 
-how many points out of 20 do you deserve on this assignment: 15 or 16 - unsure because I was late on the assignment. Game works as expected and is fully functional.
+<h3>Game</h3>
+<img width="750" alt="Results" src="https://user-images.githubusercontent.com/94927484/198027847-c21fec22-cbf0-4a58-b4d8-a25884146e3d.jpg">
 
-## Self-Reflection:
-This was an assignment that took more time than previous ones. I was stuck on some of the functions, the comments were in depth enough to walk me through it to get everything working. It was a fun assignment and it feels great to complete.
-### How long it took me to finish this?
-It took me ~ 4 hours to finish this
+<h1>Built With</h1>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
